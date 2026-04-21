@@ -30,3 +30,6 @@ Próximos passos:
 - Migrar para banco de dados real
 
 Projeto desenvolvido por mim para fins de estudo em programação.
+
+Imagem do projeto no terminal:
+<img width="896" height="859" alt="image" src="https://github.com/user-attachments/assets/b6b29e3d-a27b-46de-ac83-2006dc9634e0" />
