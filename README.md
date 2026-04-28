@@ -8,6 +8,7 @@ Funcionalidades:
 - Busca por nome
 - Evita cadastro de nomes duplicados
 - Salvamento em arquivo Excel
+- Deletar cliente da lista pelo nome
 
 Tecnologias utilizadas:
 - Python
