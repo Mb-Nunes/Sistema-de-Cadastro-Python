@@ -57,7 +57,7 @@ def cadastrar_clientes(ws, wb, arquivo):
             print("_______________________________")
             return
 
-        email = pedir_email(ws)  # 🔥 corrigido aqui
+        email = pedir_email(ws)
         if email is None:
             print("Cadastro cancelado.")
             print("_______________________________")
