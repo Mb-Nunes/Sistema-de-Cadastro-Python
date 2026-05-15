@@ -1,7 +1,7 @@
 from openpyxl import Workbook, load_workbook
 import os
 
-from clientes import cadastrar_clientes, listar_clientes, buscar_cliente, fechar, deletar_cliente
+from clientes import cadastrar_clientes, listar_clientes, buscar_cliente, fechar, deletar_cliente, linha, pausar
 
 arquivo = "data/tabelaclientes.xlsx"
 
@@ -11,7 +11,7 @@ if os.path.exists(arquivo):
 else:
     wb = Workbook()
     ws = wb.active
-    ws.append(["Nome", "Email"])
+    ws.append(["Nome", "Email", "Telefone"])
 
 while True:
     while True:
@@ -27,20 +27,23 @@ Escolha uma das opções: """
         if opcao in ['1', '2', '3', '4', '5']:
             break
         print("OPÇÃO INVÁLIDA.")
-        print("_______________________________")
+        linha()
 
     # CADASTRAR CLIENTES
     if opcao == '1':
         cadastrar_clientes(ws, wb, arquivo)
+        pausar()
 
 
     # LISTA DE CLIENTES
     elif opcao == '2':
         listar_clientes(ws)
+        pausar()
 
     # PESQUISAR CLIENTE
     elif opcao == '3':
         buscar_cliente(ws)
+        pausar()
 
     # FINALIZAR
     elif opcao == '4':
@@ -49,3 +52,4 @@ Escolha uma das opções: """
 
     elif opcao == '5':
         deletar_cliente(ws, wb, arquivo)
+        pausar()
